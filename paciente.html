@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paciente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="titulo">
+    <div class="p-3 mb-2 bg-primary text-white">Sistema Control del Consultorio</div>
+    </div>
+    <div id="body">
+    <div id="espacio"></div>
+    <a id="volver" href="index.html">Volver al panel de control</a>
+
+    <!–– Formulario para ingresar pacientes a la base de datos, no todos los campos son requeridos.
+     Los campos fumador, dieta y relación peso-altura solo son llenados cuando es requerido.  ––>
+
+    <div id="formulario">
+    <h3>Ingresar paciente</h3>
+    <form action="pacientes.php" method="POST" target="_self"> 
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input type="text" class="form-control" name="nombre" id="nombre" required>
+  </div>
+  <div class="mb-3">
+    <label for="edad" class="form-label">Edad</label>
+    <input type="number" class="form-control" id="edad" name="edad" required>
+  </div>
+  <div class="mb-3">
+    <label for="noHistoriaClinica" class="form-label">Numero de historia clinica</label>
+    <input type="number" class="form-control" id="noHistoriaClinica" name="noHistoriaClinica" required>
+  </div>
+  <div id="emailHelp" class="form-text">Llenar el campo fumador solo si aplica</div>
+  <p>Fumador</p>
+  <div class="form-check">
+  <input class="form-check-input" type="radio" name="fumador" id="fumadora">
+  <label class="form-check-label" for="fumadorno" value= 1>Si</label>
+  </div>
+
+  <div class="mb-3">
+    <label for="annosfumador " class="form-label">Años fumando</label>
+    <input type="number" class="form-control" id="annosfumador " name="annosfumador">
+  </div>
+  <div id="emailHelp" class="form-text">Llenar el campo dieta si el paciente es mayor de 41 años</div>
+  <p>Dieta</p>
+  <div class="form-check">
+  <input class="form-check-input" type="radio" name="dieta" id="dieta">
+  <label class="form-check-label" for="dietasi" value= 1>Si</label>
+  </div>
+  <div id="emailHelp" class="form-text">Llenar este campo solo si el paciente es menor de 15 años</div>
+  <div class="mb-3">
+    <label for="relacionPesoAltura " class="form-label">Relacion peso-altura</label>
+    <input type="number" class="form-control" id="relacionPesoAltura " name="relacionPesoAltura">
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+  <button type="reset" class="btn btn-primary">Limpiar</button>
+   </form>
+    </div>
+
+    <footer>
+        <div class="p-3 mb-2 bg-primary text-white">Powered by <a href="https://www.inexoos.com/en/home-english/">Inexoos</a> &copy; Todos los derechos revervados</div>
+      </footer>
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>
